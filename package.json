@@ -1,0 +1,25 @@
+{
+  "name": "node-main",
+  "version": "1.0.0",
+  "description": "node js exploratory project",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayurgupta1991/NodeApp.git"
+  },
+  "author": "mayur gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayurgupta1991/NodeApp/issues"
+  },
+  "homepage": "https://github.com/mayurgupta1991/NodeApp#readme",
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "nodemon": "^1.15.1",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {}
+}
