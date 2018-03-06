@@ -1,25 +1,24 @@
-console.log('asdas');
-
 const fs = require('fs');
 const os = require('os');
 const _ = require('lodash');
-
 const yargs = require('yargs');
-
+const argv = yargs.argv;
 const notes = require('./notes.js');
 
-const argv = yargs.argv;
+const command = argv._[0];
 
-/*var user = os.userInfo();
-fs.appendFile('greetings.txt', `Hello ${user.username}!`)*/
-//console.log('Result:', notes.add(9, -2));
-process.argv.forEach((val, index) => {
-    console.log(`${index}: ${val}`);
-});
+if (command === 'add') {
+    notes.addNote(argv.title, argv.body);
+} else if (command === 'list') {
+    notes.getAll();
+} else if (command === 'read') {
+    notes.getNote(argv.title);
+} else if (command === 'remove') {
+    notes.removeNote(argv.title);
+} else {
+    console.log('Command not recognized');
+}
 
 
-console.log(process.argv);
-
-
-console.log('argv value', argv);
+//node App.js add --title mayur --body='main file'
 
