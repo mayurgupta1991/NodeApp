@@ -2,8 +2,25 @@ const fs = require('fs');
 const os = require('os');
 const _ = require('lodash');
 const yargs = require('yargs');
-const argv = yargs.argv;
 const notes = require('./notes.js');
+
+const constants = require('./constansts');
+const { TITLE_OTIONS, BODY_OTIONS } = constants;
+
+const argv = yargs
+    .command('add', 'Add a new note', {
+        title: TITLE_OTIONS,
+        body: BODY_OTIONS
+    })
+    .command('list', 'List all notes')
+    .command('read', 'Read a note', {
+        title: TITLE_OTIONS,
+    })
+    .command('remove', 'Remove a note', {
+        title: TITLE_OTIONS
+    })
+    .help()
+    .argv;
 
 const command = argv._[0];
 
@@ -36,5 +53,5 @@ if (command === 'add') {
 
 
 
-//node App.js add --title mayur --body='main file'
+//node App.js add --title mayur --body='main file' ==> node App.js add -t='main file changed 2' -b='main body'
 
