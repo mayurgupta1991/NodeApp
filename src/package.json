@@ -1,0 +1,36 @@
+{
+  "name": "node-main",
+  "version": "1.0.0",
+  "description": "node js exploratory project",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src",
+    "lint:changed": "LIST=`git diff-index --name-only HEAD | grep '.jsx\\{0,1\\}'$`; if [ \"$LIST\" ]; then eslint $LIST; fi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayurgupta1991/NodeApp.git"
+  },
+  "author": "mayur gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayurgupta1991/NodeApp/issues"
+  },
+  "homepage": "https://github.com/mayurgupta1991/NodeApp#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "lodash": "^4.17.5",
+    "nodemon": "^1.15.1",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
+  }
+}
